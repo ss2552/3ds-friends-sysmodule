@@ -1,4 +1,5 @@
 export CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
+export RUSTFLAGS="-Z sparse-registry"
 
 CRATE_NAME	= friends_sysmodule
 
