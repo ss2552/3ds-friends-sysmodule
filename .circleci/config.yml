@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: devkitpro/devkitarm:20230526
+      - image: rust:latest
 
     steps:
       - checkout
