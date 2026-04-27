@@ -15,7 +15,7 @@ jobs:
           command: |
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
             . "$HOME/.cargo/env"
-            rustup default nightly-2024-10-01
+            rustup default nightly-2022-10-15
             rustup component add rust-src
             cargo install --locked cargo-3ds
             make debug
