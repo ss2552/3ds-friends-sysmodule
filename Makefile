@@ -43,10 +43,10 @@ $(DEBUG_CXI) : $(DEBUG_ELF)
 	@makerom -f ncch -rsf friends-debug.rsf -o $@ -elf $<
 
 $(RELEASE_ELF) : $(SOURCES)
-	@cargo build --release $(CARGO_BUILD_FLAGS) --target armv6k-nintendo-3ds -Z build-std
+	@cargo build --release $(CARGO_BUILD_FLAGS) --target armv6k-nintendo-3ds
 
 $(DEBUG_ELF) : $(SOURCES)
-	@cargo build $(CARGO_BUILD_FLAGS) --target armv6k-nintendo-3ds -Z build-std
+	@cargo build $(CARGO_BUILD_FLAGS) --target armv6k-nintendo-3ds
 
 clean:
 	@rm -rf $(OUT_DIR)
