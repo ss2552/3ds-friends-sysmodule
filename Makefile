@@ -18,19 +18,9 @@ DEBUG_CXI	= $(RUST_DEBUG_DIR)/$(CRATE_NAME).cxi
 
 SOURCES = $(wildcard src/*.rs) $(wildcard src/**/*.rs) $(wildcard src/**/**/*.rs)
 
-.PHONY: all clean test docs docs lint
+.PHONY: debug
 
-all: release debug test
-
-docs:
-	@cargo doc --open $(CARGO_BUILD_FLAGS)
-
-# Nightly and unstable options prevent clippy from linting dependencies - https://github.com/rust-lang/rust-clippy/issues/1066
-lint:
-	@cargo +nightly clippy -Zunstable-options $(CARGO_BUILD_FLAGS) --target armv6k-nintendo-3ds
-
-test:
-	@cargo test
+all: debug
 
 release: $(RELEASE_DIR)/exheader.bin
 
