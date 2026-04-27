@@ -1,3 +1,5 @@
+export CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
+
 CRATE_NAME	= friends_sysmodule
 
 CARGO_BUILD_FLAGS = -Z build-std=core,alloc
