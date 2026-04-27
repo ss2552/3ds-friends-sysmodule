@@ -3,13 +3,14 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: rust:latest
+      - image: devkitpro/devkitarm
 
     steps:
       - checkout
       - run:
           name: install & make
           command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh &&
             rustup default nightly &&
             cargo install --locked cargo-3ds &&
             rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu &&
