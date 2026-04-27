@@ -11,6 +11,7 @@ jobs:
           name: install & make
           command: |
             rustup default nightly &&
+            cargo install --locked cargo-3ds &&
             make debug
 
 workflows:
