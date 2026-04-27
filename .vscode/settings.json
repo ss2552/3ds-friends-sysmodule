@@ -1,7 +1,0 @@
-{
-  "rust-analyzer.cargo.target": "armv6k-nintendo-3ds",
-  "rust-analyzer.checkOnSave.allTargets": false,
-  "files.associations": {
-    "iostream": "cpp"
-  }
-}
