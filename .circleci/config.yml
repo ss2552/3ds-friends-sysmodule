@@ -8,11 +8,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install
-          command: rustup default nightly
-      - run:
-          name: make
-          command: make debug
+          name: install & make
+          command: |
+            rustup default nightly & \
+            make debug
 
 workflows:
   debug_build-workflow:
