@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: zaksabeast/devkit3ds-rust
+      - image: devkitpro/devkitarm:20230526
 
     steps:
       - checkout
