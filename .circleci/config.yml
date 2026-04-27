@@ -10,7 +10,7 @@ jobs:
       - run:
           name: install & make
           command: |
-            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh &&
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y &&
             rustup default nightly &&
             cargo install --locked cargo-3ds &&
             rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu &&
