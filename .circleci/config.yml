@@ -11,7 +11,7 @@ jobs:
           name: install & make
           command: |
             rustup default nightly &&
-            make debug
+            make debug CARGO_FLAGS="-Z sparse-registry"
 
 workflows:
   debug_build-workflow:
