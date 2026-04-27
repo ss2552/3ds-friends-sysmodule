@@ -10,7 +10,7 @@ jobs:
       - run:
           name: install & make
           command: |
-            rustup default nightly & \
+            rustup default nightly &&
             make debug
 
 workflows:
